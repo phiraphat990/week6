@@ -1,7 +1,7 @@
 pipeline {
    agent any
     stages {
-         stage('pre -build') {
+        stage('pre -build') {
             steps {
                 sh 'echo Pre-build'
                 sh 'python3 --version'
@@ -24,7 +24,8 @@ pipeline {
                 sh 'python3  Webhook/main.py'
             }
         }
-        post {
+    }
+    post {
                always {
                   echo 'Always'
                }
@@ -41,5 +42,4 @@ pipeline {
                   echo 'Only if status changed from Success to Failure or vice versa w.r.t. last run'
                }
         }
-    }
 }
