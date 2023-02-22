@@ -24,6 +24,12 @@ pipeline {
                 sh 'python3  Webhook/main.py'
             }
         }
+        stage('end') {
+            steps {
+                echo 'echo Deploying build'
+                sh 'python3  Webhook/main.py'
+            }
+        }
     }
     post {
                always {
