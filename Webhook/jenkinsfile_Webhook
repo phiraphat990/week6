@@ -24,11 +24,5 @@ pipeline {
                 sh 'python3  Webhook/main.py'
             }
         }
-        post {
-               always {
-                  echo 'Always'
-               }
-               
-        }
     }
 }
