@@ -41,5 +41,5 @@ pipeline {
                 changed{
                   echo 'Only if status changed from Success to Failure or vice versa w.r.t. last run'
                }
-        }
+    }
 }
